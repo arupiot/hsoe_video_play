@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  player:
+    container_name: player
+    image: "arupiot/hsoe-video-play:latest"
+    privileged: true
+    volumes:
+       - /opt/video:/opt/video
+       - /dev/vchiq:/dev/vchiq
+       - /opt/vc:/opt/vc
+    restart: always
+    environment:
+      - AUDIO_VOLUME=0
+      - AUDIO_DEVICE=hdmi
+      - AUDIO_PATH=./
+      - AUDIO_EXT=.mp4
+      - AUDIO_LAYOUT=2.1
