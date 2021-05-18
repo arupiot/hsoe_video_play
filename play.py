@@ -43,7 +43,7 @@ def main():
             if ext.lower() == AUDIO_EXT:
                 filename = join(AUDIO_PATH,f)
                 print("Playing file:", filename)
-                system('omxplayer -o %s --vol %s --layout %s "%s"' % (AUDIO_DEVICE, str(AUDIO_VOLUME), str(AUDIO_LAYOUT), filename))
+                system('omxplayer -r -b -o %s --vol %s --layout %s "%s"' % (AUDIO_DEVICE, str(AUDIO_VOLUME), str(AUDIO_LAYOUT), filename))
 
 if __name__ == '__main__':
     main()

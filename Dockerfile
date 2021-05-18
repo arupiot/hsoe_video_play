@@ -14,7 +14,7 @@ RUN python3 -m pip install --trusted-host pypi.python.org -r requirements.txt
 
 # execute the audio player program
 COPY play.py play.py
-COPY ATM-V3.mp4 ATM-V3.mp4
+COPY ATM-V3-shifted.mp4 ATM-V3-shifted.mp4
 CMD ["python3", "play.py"]
 
 RUN [ "cross-build-end" ]
